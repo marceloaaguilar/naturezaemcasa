@@ -1,0 +1,288 @@
+@font-face {
+    font-family: Herr Von Muellerhoff;
+    src: url(../fonts/HerrVonMuellerhoff-Regular.ttf);
+}
+
+
+.modal{
+    z-index: 2000;
+}
+#modalText{
+    width: 100%;
+    height: 20rem;
+    justify-content: center;
+}
+.modal-body{
+    justify-content: center;
+}
+
+
+#salvar{
+    background-color: #29503A;
+    color: white;
+}
+
+#fechar{
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+
+#cadastrarBtn{
+    background-color: #29503A;
+    border: none;
+}
+
+#alert-sucess{
+    background-color: #b9ffa2;
+    border-color: black;
+    border-width: 0.3px;
+    z-index: 3000;
+    height: 2.5rem;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0px;
+    left: 15rem !important;
+    right: 15rem !important;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation: expand 0.5s;
+}
+
+
+#alert-text{
+    margin: 0;
+    padding: 0.4rem;
+    color: black;
+    font-size: 1.1rem;
+}
+
+
+
+@-webkit-keyframes expand{
+    0%{height:0px}
+    100%{height:2.5rem}
+}
+#modalImg{
+    display: none;
+    background-color: #29503A;
+    width: 60rem;
+    height: 35rem;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#modalImgCloseIcon{
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    color: white;
+    top: 0.2rem;
+    right: 1rem;
+    position: absolute;
+    font-size: 2rem;
+    
+}
+
+
+#imgConteudo{
+    width: 40rem;
+    overflow: auto;    
+
+
+}
+
+#containerBlog
+{
+    margin: 2rem 5rem 2rem 5rem;
+    display: none;
+    
+}
+
+
+#cardConteudos{
+    width: 100%;   
+}
+
+
+#blogTitle{
+    font-size: 2rem;
+    color: #29503A;
+    font-weight: 700;
+}
+
+#blogText, #blogDataAtualizacao{
+    color: #29503A;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #29503A;
+}
+
+#imgAuthor{
+    width:90px;
+    height:90px
+}
+
+#InfosAuthor{
+    justify-content: start;
+    align-content: center;
+}
+
+
+#containerContentBlog{
+margin:3rem;
+}
+
+#authorBox{
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+
+#containerImgBlog{
+    display: flex;
+    justify-content: center;
+}
+
+#titleContentBlog{
+    font-size: 3rem;
+}
+
+#dateTimeContentBlog{
+    margin-top: 1.4rem;
+    font-weight: 300;
+}
+
+#containerFullContentBlog{
+    margin-top: 2rem;
+    display: grid;
+    justify-content: center;
+}
+
+#imageContentBlog{
+    width: 100rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
+#textContentBlog{
+    margin-top: 2rem;
+}
+
+#posts-mais-recentes{
+    text-align: left;
+    margin-bottom: 5rem;
+}
+
+h4{
+    margin: 2rem 0 2rem 0;
+    color: #29503A;
+    font-size: 2.2rem;
+}
+
+#recent-card{
+    max-width: 17rem;
+    margin-left: 1rem;
+}
+
+#most-recent-card{
+    padding: 0;
+    width: 100%;
+    height: 26rem;
+    object-fit: cover;
+    display: flex;
+    align-items: end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+#most-recent-card-titles{
+    background-color: rgba(255, 255, 255, .66);
+    margin: 0 1rem 1rem 0;
+    padding: 1rem 1rem 0 1rem;
+}
+
+#blogImg{
+    width: 100%;
+}
+
+#recent-card{
+    padding: 0;
+    width: 30rem;
+    height: 12rem;
+    display: flex;
+    align-items: end;
+    color: #29503A;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+#recent-card-titles{
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, .66);
+    width: 90%;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+#col-row-recent-posts{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+#dicas-de-jardinagem-card, #dicas-de-paisagismo-card{
+    height: 13rem;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    background-size: cover;
+    display: none;
+}
+
+/* #blogImg:hover {
+    transform: scale(1.04);
+    transition: transform 50ms ease-in-out;
+} */
+
+a{
+    text-decoration: none;
+}
+
+
+@media only screen and (max-width:767px){
+    
+#containerBlog
+{
+    margin: 2rem 2rem 2rem 2rem;
+    display: none;
+    
+}
+
+#most-recent-card{
+    width: 100%;
+}
+
+#recent-card{
+    max-width: 100%; 
+    margin: 1rem 0 1rem 0;
+}
+
+#col-row-recent-posts{
+    gap: 0;
+}
+}

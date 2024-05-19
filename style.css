@@ -1,0 +1,141 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ms-2 {
+    margin-left: 2rem!important;
+    margin-right: 2rem !important;
+  }
+
+.socialMediaIcons{
+    list-style:none;
+   gap: 5rem;
+   font-size: 1rem;
+    
+
+}
+i {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.bi {
+    color: white;
+    border-radius: 10px;
+}
+
+#carouselHome{
+    margin-bottom: 5rem;
+}
+
+
+
+h2 {
+    font-size: 1.2rem;
+}
+
+#containerFormLoginBlog{
+    margin-top: 10rem;
+    align-items: center;
+    width: 40rem;
+}
+
+
+#formTitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #29503A;
+}
+
+
+#btnLogin{
+    background-color: #29503A ;
+}
+/* Responsive CSS */
+@media only screen and (min-width:768px) and (max-width: 991px)
+{
+
+    .navbar-text{
+        font-size: 0.8rem;
+    }
+    
+    .socialMediaIcons{
+        gap: 2rem;
+    }
+    
+    .about-img{
+        height: 25rem;
+        object-fit: cover;
+    }
+    
+    .youtube-videos {
+        display: grid !important;
+        
+        
+    }
+    
+    .contact-form {
+        padding: 2rem 0 2rem 0;
+    }
+    
+    .contact-img{
+        height: 30rem;
+        object-fit: cover;    
+    }
+    
+    
+}
+
+
+@media only screen and (max-width:767px) {
+    .container{
+        text-align: center;
+    }
+    .navbar-text{
+        width: 1rem;
+    }
+    .socialMediaIcons{
+        display: grid !important;
+        gap: 0.4rem;
+    }
+
+    .navbar-toggler{
+        display: flex !important;
+        flex-wrap: wrap !important;
+        text-align: left;
+        border: none !important;
+        color: black;
+        outline: none !important;
+        border: none !important;
+    }
+
+
+
+    .about-info{
+        display: grid !important;
+        
+    }
+
+    .about-info{
+        justify-content: center;
+        display: grid;
+    }
+
+
+    .contact-form{
+        padding-top: 2rem;
+    }
+    
+    .contact-img{
+        display: none !important;  
+    }
+
+    .row-footer{
+        gap:10px !important;
+    }
+
+    .divider {
+        display: none;
+    }
+}

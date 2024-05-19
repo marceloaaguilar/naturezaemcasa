@@ -1,0 +1,14 @@
+.menu-site{
+    display: flex; 
+    align-items: center;
+    gap: 2rem;
+}
+
+.menu-site a {
+    text-decoration: none;
+}
+
+.menu-site a p {
+    color: #FFFFFF; 
+    margin: 0;
+}
