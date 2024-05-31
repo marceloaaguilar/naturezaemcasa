@@ -6,7 +6,7 @@
                 <div class="row align-items-center p-3 text-center">
                 <div class="col-md-4 footer-column">
                     <a href="/">
-                        <img src="../Logos/logoNaturezaEmCasa.png" class="img-fluid" width="40%" alt="">
+                        <img src="../Logos/logoVerde.png" class="img-fluid" width="40%" alt="">
                     </a>
                 </div>
                 <div class="col-md-4 footer-column p-3">

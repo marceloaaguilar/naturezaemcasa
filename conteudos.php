@@ -24,6 +24,10 @@
 
     <!-- Bootstrap ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/decoupled-document/ckeditor.js"></script>
+
+
 </head>
 <body>
     <!-- Button trigger modal -->
@@ -54,9 +58,6 @@
             <button type="button" class="btn btn-primary" id="cadastrarBtn" data-bs-toggle="modal" data-bs-target="#cadastrarConteudo" >Cadastrar Conteúdo</button>
         </div>
     
-        <div class="alert alert-success m-0" id="alert-sucess" role="alert"> 
-            <p id="alert-text"  >Alert Text...</p>
-        </div>
     </div>
     <div class="modal " tabindex="-1" id ="cadastrarConteudo">
         <div class="modal-dialog modal-xl">
@@ -93,34 +94,10 @@
                                     <input type="file" accept="image/jpeg, image/png, image/jpg" class="form-control" id="imagemPrincipal"> 
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="mb-3">
-                                    <label for="imagem" class="form-label">Imagem Cabeçalho</label>
-                                    <input type="file" accept="image/jpeg, image/png, image/jpg" class="form-control" id="imagemCabecalho"> 
-                                </div>
-                            </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="mb-3">
-                                    <label for="imagem" class="form-label">Imagem Corpo</label>
-                                    <input type="file" accept="image/jpeg, image/png, image/jpg" class="form-control" id="imagemCorpo"> 
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="mb-3">
-                                    <label for="imagem" class="form-label">Imagem Rodapé</label>
-                                    <input type="file" accept="image/jpeg, image/png, image/jpg" class="form-control" id="imagemRodape"> 
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="mb-3">
-                            <label for="artigo" class="form-label"> Texto </label>
-                            <textarea class="form-control" id="artigo" rows="10"></textarea>
-                        </div>
+                        <label style="margin-bottom: 1rem;">Conteúdo</label>
+                        <div id="toolbar-container"></div>
+                        <div id="editor"></div>
 
 
                         <div class="modal-footer">
@@ -141,5 +118,9 @@
     <!-- Bootstrap CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

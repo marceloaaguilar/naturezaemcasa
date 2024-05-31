@@ -1,8 +1,23 @@
 var table;
 var idContent;
+let newEditor;
 
 window.addEventListener("load", (event) => {
    carregaTabelaConteudos();
+   DecoupledEditor
+   .create( document.querySelector( '#editor' ), {
+    ckfinder:{
+        uploadUrl: 'classes/fileupload.php'
+    }
+   })
+   .then( editor => {
+    const toolbarContainer = document.querySelector( '#toolbar-container' );
+    toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+    newEditor = editor;
+} )
+   .catch( error => {
+       console.error( error );
+   } );
    
 })
 
@@ -72,11 +87,6 @@ function carregaTabelaConteudos() {
                     
                 }
                 },
-
-                        
-                    
-                
-
                 {title:"Data de Criação", field:"data_Criacao"}
             ],
         });
@@ -117,38 +127,28 @@ function salvarArtigo(idContent){
 }
 
 
-function alertSucess(txt){
-    alertBox = document.getElementById("alert-sucess");
-    alertTxt = document.getElementById("alert-text");
-    alertTxt.innerHTML = txt;
-    alertBox.style.display = "flex";
-    setTimeout(() => {alertBox.style.display = "none"; }, 4000);
-    
-}
-
-
 let formCadastroDeConteudo = document.getElementById("formCadastroDeConteudo");
 formCadastroDeConteudo.addEventListener("submit", function(e){
     e.preventDefault();
     let title           = document.getElementById("titulo").value; 
     let imgPrincipal    = document.getElementById("imagemPrincipal").files[0];
-    let imgCabecalho    = document.getElementById("imagemCabecalho").files[0];
-    let imgCorpo        = document.getElementById("imagemCorpo").files[0];
-    let imgRodape       = document.getElementById("imagemRodape").files[0];
-    let text            = document.getElementById("artigo").value;
     let typeContent     = document.getElementById("tipoConteudo").value;
     
 
     var formData = new FormData();
-    formData.append("metodo", "processaCadastroConteudo");
     formData.append("imgPrincipal", imgPrincipal);
-    formData.append("imgCabecalho", imgCabecalho);
-    formData.append("imgCorpo", imgCorpo);
-    formData.append("imgRodape", imgRodape);
     formData.append("titulo",  title);
-    formData.append("texto",  text);
     formData.append("tipoConteudo",  typeContent);
+    formData.append("metodo", "processaCadastroConteudo");
+    formData.append("editorData", newEditor.getData());
 
+    Swal.fire({
+    title: "Processando...",
+    timerProgressBar: true,
+    didOpen: () => {
+        Swal.showLoading();
+    }
+    })
 
     fetch('classes/realizaQuery', {
         method: "POST",
@@ -156,23 +156,50 @@ formCadastroDeConteudo.addEventListener("submit", function(e){
       })
       .then(response => response.json()) 
       .then(data => {
+        Swal.close();
           if(data == true){
-              alertSucess("Artigo Cadastrado com sucesso!")
-              myModal.hide();
-              carregaTabelaConteudos();
+            Swal.fire({
+                title: 'Conteúdo cadastrado com sucesso',
+                toast: true,
+                icon: 'success',
+              });
+            myModal.hide();
+            carregaTabelaConteudos();
           }
 
       });
-
-
-
-    
-
 })
 
 let btnFecharModalImg = document.getElementById("modalImgCloseIcon");
 btnFecharModalImg.addEventListener('click', function(){
     var modalImg = document.getElementById("modalImg");
     modalImg.style.display = "none"
+
+});
+
+let title = document.getElementById("titulo");
+title.addEventListener("change", function() {
+    if (title.value.includes('-' )){
+        Swal.fire({
+            title: 'Não são permitidos caracteres especiais no título do conteúdo!',
+            toast: true,
+            icon: 'error',
+          });
+        title.value = '';
+    }
+
+    let directory = title.value.replaceAll(' ', '-');
+    fetch('classes/realizaQuery?campos=*&where=diretorio_Conteudo=' +  "'" +  directory + "'")
+    .then(response => response.json()) 
+    .then(existeTitulo => { 
+        if (existeTitulo.length > 0){
+            Swal.fire({
+                title: 'Já existe um conteúdo com esse título!',
+                toast: true,
+                icon: 'error',
+              });
+            title.value = '';
+        }
+    })
 
 })

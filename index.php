@@ -37,7 +37,6 @@
                     <div id="most-recent-card">
                         <div id="most-recent-card-titles">
                             <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
                             <p id="blogDataAtualizacao"></p>
                         </div>
                     </div>
@@ -93,85 +92,86 @@
         
         </div>
 
+        <div id="div-jardinagem-card">
+            <div class="border-top my-3"></div>
+            <h4>Dicas de Jardinagem</h4>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <a href="">
+                        <div id="dicas-de-jardinagem-card">
+                            <div id="recent-card-titles">
+                                <h5 id="blogTitle"></h5>
+                                <p id="blogDataAtualizacao"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-sm-12 col-lg-6">
+                    <a href="">
+                        <div id="dicas-de-jardinagem-card">
+                            <div id="recent-card-titles">
+                                <h5 id="blogTitle"></h5>
+                                <p id="blogDataAtualizacao"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <a href="">
+                        <div id="dicas-de-jardinagem-card">
+                            <div id="recent-card-titles">
+                                <h5 id="blogTitle"></h5>
+
+                                <p id="blogDataAtualizacao"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="col-sm-12 col-lg-6">
+                    <a href="">
+                        <div id="dicas-de-jardinagem-card">
+                            <div id="recent-card-titles">
+                                <h5 id="blogTitle"></h5>
+
+                                <p id="blogDataAtualizacao"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="border-top my-3"></div>
+        <div id="div-paisagismo-card">
+            <h4>Dicas de Paisagismo</h4>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <a href="">
+                        <div id="dicas-de-paisagismo-card">
+                            <div id="recent-card-titles">
+                                <h5 id="blogTitle"></h5>
 
-        <h4>Dicas de Jardinagem</h4>
-        <div class="row">
-            <div class="col-sm-12 col-lg-6">
-                <a href="">
-                    <div id="dicas-de-jardinagem-card">
-                        <div id="recent-card-titles">
-                            <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
-                            <p id="blogDataAtualizacao"></p>
+                                <p id="blogDataAtualizacao"></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
+    
+                <div class="col-sm-12 col-lg-6">
+                    <a href="">
+                        <div id="dicas-de-paisagismo-card">
+                            <div id="recent-card-titles">
+                                <h5 id="blogTitle"></h5>
 
-            <div class="col-sm-12 col-lg-6">
-                <a href="">
-                    <div id="dicas-de-jardinagem-card">
-                        <div id="recent-card-titles">
-                            <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
-                            <p id="blogDataAtualizacao"></p>
+                                <p id="blogDataAtualizacao"></p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-lg-6">
-                <a href="">
-                    <div id="dicas-de-jardinagem-card">
-                        <div id="recent-card-titles">
-                            <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
-                            <p id="blogDataAtualizacao"></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-12 col-lg-6">
-                <a href="">
-                    <div id="dicas-de-jardinagem-card">
-                        <div id="recent-card-titles">
-                            <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
-                            <p id="blogDataAtualizacao"></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <div class="border-top my-3"></div>
-        <h4>Dicas de Paisagismo</h4>
-        <div class="row">
-            <div class="col-sm-12 col-lg-6">
-                <a href="">
-                    <div id="dicas-de-paisagismo-card">
-                        <div id="recent-card-titles">
-                            <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
-                            <p id="blogDataAtualizacao"></p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-12 col-lg-6">
-                <a href="">
-                    <div id="dicas-de-paisagismo-card">
-                        <div id="recent-card-titles">
-                            <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
-                            <p id="blogDataAtualizacao"></p>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -180,7 +180,6 @@
                     <div id="dicas-de-paisagismo-card">
                         <div id="recent-card-titles">
                             <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
                             <p id="blogDataAtualizacao"></p>
                         </div>
                     </div>
@@ -192,7 +191,6 @@
                     <div id="dicas-de-paisagismo-card">
                         <div id="recent-card-titles">
                             <h5 id="blogTitle"></h5>
-                            <p id="blogText"></p>
                             <p id="blogDataAtualizacao"></p>
                         </div>
                     </div>
@@ -200,9 +198,65 @@
             </div>
         </div>
     </div>
-    <div class="border-top my-3"></div>
-</body>
+    <footer style="background-color: #29503A;">
+        <div class="container">
+            <div class="row align-items-center p-3 text-center">
+                <div class="col-md-4 footer-column">
+                    <a href="/">
+                        <img src="Logos/logoTransparente.png" class="img-fluid" width="40%" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4 footer-column p-3">
+                    <ul class="nav flex-column" style="text-decoration:none">
+                    <li>
+                        <a class="nav-link" href="livros" style="color:white;">
+                            Livros
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="curso" style="color:white;">
+                            Curso
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="consultoria" style="color:white;">
+                            Consultorias
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="" style="color:white;">
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="contato" style="color:white;">
+                            Contato
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-column">
+                    <ul class="nav flex-column gap-3">
+                        <li>
+                            <a style="text-decoration: none;" href="https://www.instagram.com/_naturezaemcasa/" target="_blank" >
+                                <i class="bi bi-instagram rounded-circle" style="color: #FFFFFF;">   Instagram </i>
 
-<?php
-    include_once 'classes/footer.php';
-?>
+                            </a>
+                        </li>
+                        <li> 
+                            <a style="text-decoration: none;" href="https://www.youtube.com/@_naturezaemcasa"  target="_blank">
+                                <i class="bi bi-youtube" style="color: #FFFFFF;" >  Youtube </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a style="text-decoration: none;" href="https://br.pinterest.com/naturezaemcasa_/"  target="_blank">
+                                <i class="bi bi-pinterest" style="color: #FFFFFF;">  Pinterest </i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center"><i class="fas fa-ellipsis-h m-5"></i></div>
+        </div>
+    </footer>
+</body>

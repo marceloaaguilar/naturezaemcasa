@@ -1,8 +1,8 @@
 <?php
 
     session_start();
-    // $dbinfo = new mysqli('br750.hostgator.com.br', 'natu0636_marcelo', 'Marcelo@Natureza', 'natu0636_naturezaEmCasaBlog');
-    $dbinfo = new mysqli('localhost', 'root', '12345', 'naturezaemcasa');
+    $dbinfo = new mysqli('br750.hostgator.com.br', 'natu0636_marcelo', 'Marcelo@Natureza', 'natu0636_naturezaEmCasaBlog');
+    // $dbinfo = new mysqli('localhost', 'root', '12345', 'naturezaemcasa');
 
     if (isset($_POST['usuario']) && isset($_POST['senha'])){
         $name = $_POST["usuario"];

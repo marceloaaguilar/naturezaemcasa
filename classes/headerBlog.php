@@ -32,19 +32,19 @@
                 <div class="col"></div>
                 <div class="navbar-text col text-center menu-site">
 
-                   <a href="/" target="_blank">
+                   <a href="https://naturezaemcasa.com/" target="_blank">
                         <p>Sobre Nós </p>
                    </a>
 
-                   <a href="/livros" target="_blank">
+                   <a href="https://naturezaemcasa.com/livros.php" target="_blank">
                         <p>Livros</p>
                    </a>
 
-                   <a href="/curso" target="_blank">
+                   <a href="https://naturezaemcasa.com/curso.php" target="_blank">
                         <p>Curso</p>
                    </a>
 
-                   <a href="/consultoria" target="_blank">
+                   <a href="https://naturezaemcasa.com/consultoria.php" target="_blank">
                         <p>Consultoria  </p>
                    </a>
 
@@ -62,19 +62,11 @@
                         <img class="d-flex mt-3 mx-auto img-fluid navbar-brand" style="max-width: 8rem;" src="../Logos/Logo.jpg">
                     </a>
                 </div>
-
-                <div class="col-auto">
-                    <button class="navbar-toggler d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
             </div>
 
         </div>
     </nav>
     <h3 >Blog - Natureza Em Casa</h3>
     <hr class="featurette-divider">
-
-
 </body>
 </html>

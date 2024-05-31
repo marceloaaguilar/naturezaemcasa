@@ -4,6 +4,7 @@
             public function __construct(){
                 
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+                // $this -> mysqli = new mysqli('br750.hostgator.com.br', 'natu0636_marcelo', 'Marcelo@Natureza', 'natu0636_naturezaEmCasaBlog');
                 $this -> mysqli = new mysqli('localhost', 'root', '12345', 'naturezaemcasa');
                 $this -> mysqli->set_charset('utf8mb4');
                 
@@ -50,46 +51,6 @@
                 return $return;
             }
             
-
-            
-
-
-
-        //     private $conn;
-        //      public function __construct() {
-        //         define("PORT", "3306");
-        //         define("DB", "natu0636_naturezaEmCasaBlog");
-        //         define("END", "br750.hostgator.com.br");
-        //         define("USER", "natu0636_marcelo");
-        //         define("PASS", "Marcelo@Natureza"); 
-
-        //         // define("PORT", "3306");
-        //         // define("DB", "natu0636_naturezaEmCasaBlog");
-        //         // define("END", "127.0.0.1");
-        //         // define("USER", "root");
-        //         // define("PASS", "12042002"); 
-
-
-                
-        //         try {
-                    
-        //             $this->conn = new PDO('mysql:host=' . END . ';port=' . PORT . ';dbname=' . DB . ';charset=utf8', USER, PASS);
-        //             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                   
-                    
-                    
-        //         } catch (PDOException $e){
-        //             var_dump($e);
-        //         }
-                
-
-            
-        // }
-
-        // public function get_conn(){
-        //     return $this -> conn;
-        // }
-
            
         }
             

@@ -1,4 +1,4 @@
 RewriteEngine  on
-RewriteCond %{REQUEST_URI}  !\.(?:css|js|php|jpg)$ [NC]
+RewriteCond %{REQUEST_URI}  !\.(?:css|js|php|jpg|png)$ [NC]
 RewriteCond %{REQUEST_URI} [^/]$
 RewriteRule ^(.*)$ $1.php [L]

@@ -7,10 +7,6 @@
             $realizaQuery-> realizarUpdate();
             return true;
         }    
-        if ($_POST["metodo"] == "insert"){
-           $realizaQuery ->realizarInsert();
-           return true;
-        }
 
         if ($_POST["metodo"] == "processaCadastroConteudo"){
             $return = $realizaQuery ->processaCadastroConteudo();
@@ -28,33 +24,11 @@
 
     class realizaQuery {
         
-        public function __construct() {
-        }
-
-
         public function realizarUpdate(){
             $dbinfo = new dbinfo();
             $query = "UPDATE nec_conteudos SET " . $_POST['campo'] . " = " . "\"{$_POST["conteudo"]}\"". " WHERE" . $_POST["where"];
             $result = $dbinfo -> update($query);
         }
-
-
-        // public function realizarInsert(){
-        //     $dbinfo = new dbinfo();
-        //     $query = "INSERT INTO nec_conteudos (" . $_POST['campos']. ") VALUES (" . $_POST['valores'] . ")";
-
-        //     if (isset($_FILES)){
-        //             $image = $this -> inserirImagens();
-        //             $campos = explode(",", $_POST['campos']);
-        //             $valores = explode(",", $_POST['valores']);
-        //             $valores[array_search("imagem_Conteudo", $campos)] = "\"$image\"";
-        //             $query = "INSERT INTO nec_conteudos (" . implode(",",$campos). ") VALUES (" . implode(",", $valores) . ")";
-
-        //     }
-
-        //     $result = $dbinfo -> insert($query);
-        // }
-
 
         public function realizarSelect(){
             $dbinfo     = new dbinfo();
@@ -75,14 +49,23 @@
 
        public function processaCadastroConteudo(){
 
-        $dbinfo = new dbinfo();
+            $dbinfo = new dbinfo();
         $colunmsQuery = [];
         $valuesQuery  = [];
 
-         COUNT($_FILES['imgPrincipal']) > 0 ? array_push($colunmsQuery, 'imagem_principal') && array_push($valuesQuery,  base64_encode(file_get_contents($_FILES['imgPrincipal']['tmp_name']))  ): "";
-         COUNT($_FILES['imgCabecalho']) > 0 ? array_push($colunmsQuery, 'imagem_cabecalho') && array_push($valuesQuery, base64_encode(file_get_contents($_FILES['imgCabecalho']['tmp_name'])) ): '';
-         COUNT($_FILES['imgCorpo']) > 0 ? array_push($colunmsQuery, 'imagem_corpo') && array_push($valuesQuery,  base64_encode(file_get_contents($_FILES['imgCorpo']['tmp_name'])) ): '';
-         COUNT($_FILES['imgRodape']) > 0 ? array_push($colunmsQuery, 'imagem_rodape') && array_push($valuesQuery,  base64_encode(file_get_contents($_FILES['imgRodape']['tmp_name'])) ): '';
+        // Treating image file
+        if (COUNT($_FILES['imgPrincipal']) > 0){
+            if ($_FILES['imgPrincipal']['tmp_name']){
+                $imgName     = $_FILES["imgPrincipal"]["name"];
+                $imgPrincipal = file_get_contents($_FILES['imgPrincipal']['tmp_name']);
+
+                if (file_put_contents("../images/content/" . $imgName , $imgPrincipal) > 0){
+                    array_push($colunmsQuery, 'imagem_principal');
+                    array_push($valuesQuery, $imgName);
+                }
+            }
+        }
+         
 
  
         if ($_POST['titulo'] !== ''){
@@ -90,18 +73,19 @@
             array_push($valuesQuery,  $_POST['titulo'] );
         }
 
-        if ($_POST['texto'] !== ''){
-            array_push($colunmsQuery, 'texto_Conteudo');
-            array_push($valuesQuery, $_POST['texto']);
-        }
-
         if ($_POST['tipoConteudo'] !== ''){
             array_push($colunmsQuery, 'tipo_conteudo');
             array_push($valuesQuery,  $_POST['tipoConteudo'] );
         }
 
+        if ($_POST['editorData'] !== ''){
+            array_push($colunmsQuery, 'conteudo_artigo');
+            array_push($valuesQuery, $_POST['editorData']);
+        }
+
         array_push($colunmsQuery, 'diretorio_conteudo');
         array_push($valuesQuery, str_replace(' ', '-', $_POST['titulo']));
+        
 
         try {
             $result = $dbinfo -> insert("nec_conteudos",$colunmsQuery,$valuesQuery);
